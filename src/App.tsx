@@ -5,6 +5,7 @@ import SideBar from './components/sidebar';
 import Dashboard from './screens/dashboard';
 import Admins from './screens/adminsManagement';
 import { Route, Routes, Navigate, BrowserRouter as Router } from 'react-router-dom';
+import { stringify } from 'node:querystring';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <Routes>
           <Route path = '/' element = {<Navigate to= "/dashboard" />} />
           <Route path = '/admins-management' element = {<Admins/>} />
-          <Route path = '/dashboard' element = {<Dashboard/>} />
+          <Route path = '/dashboard' element = {<Dashboard />} />
         </Routes>
       </Router>
     </SideBar>

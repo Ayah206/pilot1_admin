@@ -28,8 +28,10 @@ const rows = [
 
 export default function Admins() {
   return (
-    <Box>
-        <Toolbar/>
+    <Box
+      component="main"
+      sx={{ flexGrow: 1, p: 3 }}
+    >
         <Toolbar>
             <Typography variant='h5'>
                 Admins management   

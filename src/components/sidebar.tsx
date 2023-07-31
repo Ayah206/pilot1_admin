@@ -21,7 +21,7 @@ const drawerList = DrawerList()
 const theme = createTheme({
   palette: {
     secondary: {
-      main: '#E1DDDB'
+      main: '#ffffff'
     },
     primary:{
       main: '#EF6C33'
@@ -32,32 +32,11 @@ export default function SideBar(props: any) {
   return (
     <ThemeProvider theme={theme}>
     <Box  sx={{ 
-      bgcolor: 'secondary.main',
       display: 'flex', 
       '& .MuiAppBar-root':{
-        bgcolor: 'secondary.main',
         boxShadow: 0
       }
-    }}>
-      {/* <CssBaseline /> */}
-      <AppBar
-        position="fixed"
-        className = 'appbar'
-        sx={{ 
-        width: `calc(100% - ${drawerWidth}px)`, 
-        ml: `${drawerWidth}px`,
-      }}
-      >
-        <Toolbar sx = {{
-            color:'black',
-            justifyContent: 'end'
-          }}>
-          <Typography mr =  {2} >
-            Admin
-          </Typography>
-          <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-        </Toolbar>
-      </AppBar>
+    }}>      
       <Drawer
         sx={{
           width: drawerWidth,
@@ -73,30 +52,35 @@ export default function SideBar(props: any) {
         className = 'drawer'
       >
         <Toolbar sx = {{
-          ml: 4,
-          color: '#EF6C33'
+            color:'black',
+            justifyContent: 'space-between',
+            position : 'sticky',
+            bgcolor : 'secondary.main',
+            top: 0
         }}>
-          <Typography variant="h5" >
+          <Typography variant="h5" sx = {{color: '#CB8215'}} >
             Pilot1
-          </Typography>  
+          </Typography> 
+          <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
         </Toolbar>
-        <Divider />
-        <List>
-          {drawerList.map((obj, index) => (
-            <ListItem key={index} disablePadding>
-              <ListItemButton>
-                <ListItemIcon sx = {{
-                  '& .MuiSvgIcon-root' :{
-                    // fill : '#EF6C33'
-                  }
-                }}>
-                  {obj.icon}
-                </ListItemIcon>
-                <ListItemText primary={obj.name} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
+      <Divider />
+      <Toolbar/>
+      <List sx = {{position: 'static'}}>
+        {drawerList.map((obj, index) => (
+          <ListItem key={index} disablePadding>
+            <ListItemButton>
+              <ListItemIcon sx = {{
+                '& .MuiSvgIcon-root' :{
+                  // fill : '#EF6C33'
+                }
+              }}>
+                {obj.icon}
+              </ListItemIcon>
+              <ListItemText primary={obj.name} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
       </Drawer>
       {props.children}
     </Box>

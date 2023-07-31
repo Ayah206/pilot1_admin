@@ -1,12 +1,12 @@
 import { Box, Typography, Toolbar } from "@mui/material"
 
+
 export default function Dashboard(){
     return(
         <Box
-        component="main"
-        sx={{ flexGrow: 1, p: 3 }}
-      >
-        <Toolbar />
+          component="main"
+          sx={{ flexGrow: 1, p: 3 }}
+        >
         <Toolbar>
             <Typography variant='h5'>
                 Dashboard  
