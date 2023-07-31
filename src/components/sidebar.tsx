@@ -49,25 +49,24 @@ export default function SideBar(props: any) {
         }}
         variant="permanent"
         anchor="left"
-        className = 'drawer'
       >
         <Toolbar sx = {{
             color:'black',
             justifyContent: 'space-between',
             position : 'sticky',
             bgcolor : 'secondary.main',
-            top: 0
+            top: 0,
+            zIndex: 99999,
+            boxShadow: 1 
         }}>
           <Typography variant="h5" sx = {{color: '#CB8215'}} >
             Pilot1
           </Typography> 
           <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
         </Toolbar>
-      <Divider />
-      <Toolbar/>
-      <List sx = {{position: 'static'}}>
+      <List>
         {drawerList.map((obj, index) => (
-          <ListItem key={index} disablePadding>
+          <ListItem key={index} disablePadding >
             <ListItemButton>
               <ListItemIcon sx = {{
                 '& .MuiSvgIcon-root' :{

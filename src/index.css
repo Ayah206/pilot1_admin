@@ -26,3 +26,6 @@ code {
 html{
   height : 100%;
 }
+.drawer{
+  z-index: 99999999 !important;
+}
