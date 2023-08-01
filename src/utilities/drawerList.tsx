@@ -29,47 +29,58 @@ export function DrawerList(){
     return ([
         {
             name: 'dashboard',
-            icon: <SupervisorAccountIcon/>
+            icon: <SupervisorAccountIcon/>,
+            href: 'dashboard'
         },
         {
             name: 'admins management',
-            icon: <AdminPanelSettingsIcon/>
+            icon: <AdminPanelSettingsIcon/>,
+            href: 'admins-management'
         },
         {
             name: 'manage company',
-            icon: <SupervisorAccountIcon/>
+            icon: <SupervisorAccountIcon/>,
+            href: 'manage-company'
         },
         {
             name: 'manage drivers',
-            icon: <ManageAccountsIcon/>
+            icon: <ManageAccountsIcon/>,
+            href: 'manage-drivers'
         },
         {
             name: 'manage riders',
-            icon: <PeopleAltIcon/>
+            icon: <PeopleAltIcon/>,
+            href: 'manage-riders'
         },
         {
             name: 'manage documents',
-            icon: <FolderIcon/>
+            icon: <FolderIcon/>,
+            href: 'manage-documents'
         },
         {
             name: 'send messages',
-            icon: <BroadcastOnPersonalIcon/>
+            icon: <BroadcastOnPersonalIcon/>,
+            href: 'send-messages'
         },
         {
             name: 'manage emails',
-            icon: <EmailIcon/>
+            icon: <EmailIcon/>,
+            href: 'send-emails'
         },
         {
             name: 'manage manual bookings',
-            icon: <DirectionsCarIcon/>
+            icon: <DirectionsCarIcon/>,
+            href: 'manage-manual-bookings'
         },
         {
             name: 'vehicles managing',
-            icon: <SupervisorAccountIcon/>
+            icon: <SupervisorAccountIcon/>,
+            href: 'vehicles-managing'
         },
         {
             name: 'additional reasons',
-            icon: <PsychologyAltIcon/>
+            icon: <PsychologyAltIcon/>,
+            href: 'additional-reasons'
         },
         {
             name: 'cancellation reasons',
@@ -77,95 +88,118 @@ export function DrawerList(){
         },
         {
             name: 'manage locations',
-            icon: <EditLocationAltIcon/>
+            icon: <EditLocationAltIcon/>,
+            href: 'manage-locations'
         },
         {
             name: 'fair management',
-            icon: <AttachMoneyIcon/>
+            icon: <AttachMoneyIcon/>,
+            href: 'fair-management'
         },
         {
             name: 'trips management',
-            icon: <DirectionsCarIcon/>
+            icon: <DirectionsCarIcon/>,
+            href: 'trips-management'
         },
         {
             name: 'manage payouts',
-            icon: <PaidIcon/>
+            icon: <PaidIcon/>,
+            href: 'manage-payouts'
         },
         {
             name: 'manage owe amount',
-            icon: <AttachMoneyIcon/>
+            icon: <AttachMoneyIcon/>,
+            href: 'manage-owe-amount'
         },
         {
             name: 'manage statements',
-            icon: <ArticleIcon/>
+            icon: <ArticleIcon/>,
+            href: 'manage-statements'
         },
         {
             name: 'manage wallet & promo',
-            icon: <WalletIcon/>
+            icon: <WalletIcon/>,
+            href: 'manage-wallet'
         },
         {
             name: 'referals',
-            icon: <PeopleAltIcon/>
+            icon: <PeopleAltIcon/>,
+            href: 'referalls'
         },
         {
             name: 'manage map',
-            icon: <SupervisorAccountIcon/>
+            icon: <SupervisorAccountIcon/>,
+            href: 'manage-map'
         },
         {
             name: 'manage mobile app version',
-            icon: <AppSettingsAltIcon/>
+            icon: <AppSettingsAltIcon/>,
+            href: 'manage-mobile'
         },
         {
             name: 'api credentials',
-            icon: <SettingsIcon/>
+            icon: <SettingsIcon/>,
+            href: 'api-credentials'
         },
         {
             name: 'payment gateway',
-            icon: <PaymentIcon/>
+            icon: <PaymentIcon/>,
+            href: 'payment-gateway'
         },
         {
             name: 'fees management',
-            icon: <PaymentIcon/>
+            icon: <PaymentIcon/>,
+            href: 'fees-management'
         },
         {
             name: 'manage referal settings',
-            icon: <SupervisorAccountIcon/>
+            icon: <SupervisorAccountIcon/>,
+            href: 'manage-referal'
         },
         {
             name: 'metas management',
-            icon: <SettingsIcon/>
+            icon: <SettingsIcon/>,
+            href: 'metas-management'
         },
         {
             name: 'manage country',
-            icon: <PublicIcon/>
+            icon: <PublicIcon/>,
+            href: 'manage country'
         },
         {
             name: 'manage currency',
-            icon: <CurrencyExchangeIcon/>
+            icon: <CurrencyExchangeIcon/>,
+            href: 'manage-currency'
         },
         {
             name: 'manage language',
-            icon: <PublicIcon/>
+            icon: <PublicIcon/>,
+            href: 'manage-language'
         },
         {
             name: 'manage static pages',
-            icon: <SettingsIcon/>
+            icon: <SettingsIcon/>,
+            href: 'manage-static-pages'
         },
         {
             name: 'manage help',
-            icon: <SupervisorAccountIcon/>
+            icon: <SupervisorAccountIcon/>,
+            href: 'manage-help'
         },
         {
             name: 'social apps and links',
-            icon: <SupervisorAccountIcon/>
+            icon: <SupervisorAccountIcon/>,
+            href: 'social-apps'
         },
         {
             name: 'manage support',
-            icon: <SupervisorAccountIcon/>
+            icon: <SupervisorAccountIcon/>,
+            href: 'manage-support'
         },
         {
             name: 'system configuration',
-            icon: <SettingsIcon/>
-        },
+            icon: <SettingsIcon/>,
+            href: 'system-config'
+        }
     ])
 }

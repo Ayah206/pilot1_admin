@@ -66,8 +66,16 @@ export default function SideBar(props: any) {
         </Toolbar>
       <List>
         {drawerList.map((obj, index) => (
-          <ListItem key={index} disablePadding >
-            <ListItemButton>
+          <ListItem key={index} disablePadding sx = {{
+          '& .Mui-selected' :{
+            boxShadow: 3
+          }
+          }} >
+            <ListItemButton className = "listButton" sx ={{
+              '&:active':{
+                boxShadow: 3
+              }
+            }}>
               <ListItemIcon sx = {{
                 '& .MuiSvgIcon-root' :{
                   // fill : '#EF6C33'
