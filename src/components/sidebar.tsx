@@ -12,75 +12,72 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { Avatar } from '@mui/material';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { DrawerList } from '../utilities/drawerList';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import AccountMenu from './accountMenu';
 
-const drawerWidth = 300;
+
+
+
+const drawerWidth = 250;
 const drawerList = DrawerList()
 
-const theme = createTheme({
-  palette: {
-    secondary: {
-      main: '#ffffff'
-    },
-    primary:{
-      main: '#EF6C33'
-    }
-  },
-});
+
 export default function SideBar(props: any) {
+  React.useEffect(()=>{
+    const path = window.location.pathname.split('/')[1]
+    const activeMenu = document.getElementById(path)
+    activeMenu && activeMenu.classList.add('activeMenuItem')
+  })
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+  const container = window !== undefined ? () => window.document.body : undefined;
+
   return (
-    <ThemeProvider theme={theme}>
     <Box  sx={{ 
       display: 'flex', 
       '& .MuiAppBar-root':{
         boxShadow: 0
       }
     }}>      
-      <Drawer
+      <Drawer className = 'drawer'
+        container={container}
+        variant="temporary"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+        ModalProps={{
+          keepMounted: true, // Better open performance on mobile.
+        }}
         sx={{
           width: drawerWidth,
           flexShrink: 0,
           '& .MuiDrawer-paper': {
             width: drawerWidth,
             boxSizing: 'border-box',
-            bgcolor:'secondary.main'
+            bgcolor:'secondary.main',
+            borderRight: 0
           },
+          '& .MuiTypography-root': {
+            fontSize : '12px'
+          }
+
         }}
-        variant="permanent"
+        // variant="permanent"
         anchor="left"
       >
-        <Toolbar sx = {{
-            color:'black',
-            justifyContent: 'space-between',
-            position : 'sticky',
-            bgcolor : 'secondary.main',
-            top: 0,
-            zIndex: 99999,
-            boxShadow: 1 
-        }}>
-          <Typography variant="h5" sx = {{color: '#CB8215'}} >
-            Pilot1
-          </Typography> 
-          <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-        </Toolbar>
+        <AccountMenu/>
       <List>
         {drawerList.map((obj, index) => (
-          <ListItem key={index} disablePadding sx = {{
-          '& .Mui-selected' :{
-            boxShadow: 3
-          }
-          }} >
-            <ListItemButton className = "listButton" sx ={{
-              '&:active':{
-                boxShadow: 3
-              }
+          <ListItem key={index} disablePadding sx = {{}} >
+            <ListItemButton id = {obj.href} component = "a" href = {obj.href}
+             sx ={{
+              textTransform: 'capitalize'
             }}>
-              <ListItemIcon sx = {{
-                '& .MuiSvgIcon-root' :{
-                  // fill : '#EF6C33'
-                }
-              }}>
+              <ListItemIcon>
                 {obj.icon}
               </ListItemIcon>
               <ListItemText primary={obj.name} />
@@ -89,8 +86,59 @@ export default function SideBar(props: any) {
         ))}
       </List>
       </Drawer>
-      {props.children}
+      <Drawer className = 'drawer'
+        open
+        sx={{
+          display: { xs: 'none', sm: 'block' },
+          width: drawerWidth,
+          flexShrink: 0,
+          '& .MuiDrawer-paper': {
+            width: drawerWidth,
+            boxSizing: 'border-box',
+            bgcolor:'secondary.main',
+            borderRight: 0
+          },
+          '& .MuiTypography-root': {
+            fontSize : '12px'
+          }
+
+        }}
+        variant="permanent"
+        anchor="left"
+      >
+        <AccountMenu/>
+      <List>
+        {drawerList.map((obj, index) => (
+          <ListItem key={index} disablePadding sx = {{}} >
+            <ListItemButton id = {obj.href} component = "a" href = {obj.href}
+             sx ={{
+              textTransform: 'capitalize'
+            }}>
+              <ListItemIcon>
+                {obj.icon}
+              </ListItemIcon>
+              <ListItemText primary={obj.name} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      </Drawer>
+      <Box
+      component="main"
+      sx={{ flexGrow: 1, p: 5 }}
+      >
+        <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: 'none' } }}
+          >
+            <MenuIcon />
+          </IconButton>
+        {props.children}
+      </Box>
+      
     </Box>
-    </ThemeProvider>
   );
 }

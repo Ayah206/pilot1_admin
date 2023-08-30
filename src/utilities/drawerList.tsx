@@ -65,7 +65,7 @@ export function DrawerList(){
         {
             name: 'manage emails',
             icon: <EmailIcon/>,
-            href: 'send-emails'
+            href: 'manage-emails'
         },
         {
             name: 'manage manual bookings',
@@ -75,7 +75,7 @@ export function DrawerList(){
         {
             name: 'vehicles managing',
             icon: <SupervisorAccountIcon/>,
-            href: 'vehicles-managing'
+            href: 'manage-vehicles'
         },
         {
             name: 'additional reasons',
@@ -84,7 +84,8 @@ export function DrawerList(){
         },
         {
             name: 'cancellation reasons',
-            icon: <NotInterestedIcon/>
+            icon: <NotInterestedIcon/>,
+            href: 'cancellation-reasons'
         },
         {
             name: 'manage locations',
@@ -122,9 +123,9 @@ export function DrawerList(){
             href: 'manage-wallet'
         },
         {
-            name: 'referals',
+            name: 'referrals',
             icon: <PeopleAltIcon/>,
-            href: 'referalls'
+            href: 'referrals'
         },
         {
             name: 'manage map',
@@ -152,9 +153,9 @@ export function DrawerList(){
             href: 'fees-management'
         },
         {
-            name: 'manage referal settings',
+            name: 'manage referral settings',
             icon: <SupervisorAccountIcon/>,
-            href: 'manage-referal'
+            href: 'manage-referral'
         },
         {
             name: 'metas management',
