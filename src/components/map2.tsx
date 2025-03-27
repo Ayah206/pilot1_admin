@@ -24,7 +24,7 @@ const CitySelectorMap = () => {
 //   )[] = ['drawing'];
 
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: 'AIzaSyATDY5CEfwIiOTsvyg-mjJyMBiyHMalq7Y',
+    googleMapsApiKey: process.env.REACT_APP_MAP_API_KEY || '',
     libraries: ['drawing'],
     id: 'google-map-script',
   });
