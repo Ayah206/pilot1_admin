@@ -18,6 +18,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import PaymentIcon from '@mui/icons-material/Payment';
 import PublicIcon from '@mui/icons-material/Public';
 import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
+import LocationCityIcon from '@mui/icons-material/LocationCity';
 
 
 const list = ['admins management','Manage company', 'manage drivers','manage riders', 'manage documents', 'send messages', 'manage emails', 'manage manual bookings', 'vehicles managing', 'additionalreasons', 'cancellation reasons', 
@@ -30,177 +31,177 @@ export function DrawerList(){
         {
             name: 'dashboard',
             icon: <SupervisorAccountIcon/>,
-            href: 'dashboard'
+            href: '/dashboard'
         },
         {
             name: 'admins management',
             icon: <AdminPanelSettingsIcon/>,
-            href: 'admins-management'
+            href: '/admins-management'
         },
         {
-            name: 'manage company',
-            icon: <SupervisorAccountIcon/>,
-            href: 'manage-company'
+            name: 'manage cities',
+            icon: <LocationCityIcon/>,
+            href: '/manage-cities'
         },
         {
             name: 'manage drivers',
             icon: <ManageAccountsIcon/>,
-            href: 'manage-drivers'
+            href: '/manage-drivers'
         },
         {
             name: 'manage riders',
             icon: <PeopleAltIcon/>,
-            href: 'manage-riders'
+            href: '/manage-riders'
         },
         {
             name: 'manage documents',
             icon: <FolderIcon/>,
-            href: 'manage-documents'
+            href: '/manage-documents'
         },
         {
             name: 'send messages',
             icon: <BroadcastOnPersonalIcon/>,
-            href: 'send-messages'
+            href: '/send-messages'
         },
         {
             name: 'manage emails',
             icon: <EmailIcon/>,
-            href: 'manage-emails'
+            href: '/manage-emails'
         },
         {
             name: 'manage manual bookings',
             icon: <DirectionsCarIcon/>,
-            href: 'manage-manual-bookings'
+            href: '/manage-manual-bookings'
         },
         {
             name: 'vehicles managing',
             icon: <SupervisorAccountIcon/>,
-            href: 'manage-vehicles'
+            href: '/manage-vehicles'
         },
         {
             name: 'additional reasons',
             icon: <PsychologyAltIcon/>,
-            href: 'additional-reasons'
+            href: '/additional-reasons'
         },
         {
             name: 'cancellation reasons',
             icon: <NotInterestedIcon/>,
-            href: 'cancellation-reasons'
+            href: '/cancellation-reasons'
         },
         {
             name: 'manage locations',
             icon: <EditLocationAltIcon/>,
-            href: 'manage-locations'
+            href: '/manage-locations'
         },
         {
             name: 'fair management',
             icon: <AttachMoneyIcon/>,
-            href: 'fair-management'
+            href: '/fair-management'
         },
         {
             name: 'trips management',
             icon: <DirectionsCarIcon/>,
-            href: 'trips-management'
+            href: '/trips-management'
         },
         {
             name: 'manage payouts',
             icon: <PaidIcon/>,
-            href: 'manage-payouts'
+            href: '/manage-payouts'
         },
         {
             name: 'manage owe amount',
             icon: <AttachMoneyIcon/>,
-            href: 'manage-owe-amount'
+            href: '/manage-owe-amount'
         },
         {
             name: 'manage statements',
             icon: <ArticleIcon/>,
-            href: 'manage-statements'
+            href: '/manage-statements'
         },
         {
             name: 'manage wallet & promo',
             icon: <WalletIcon/>,
-            href: 'manage-wallet'
+            href: '/manage-wallet'
         },
         {
             name: 'referrals',
             icon: <PeopleAltIcon/>,
-            href: 'referrals'
+            href: '/referrals'
         },
         {
             name: 'manage map',
             icon: <SupervisorAccountIcon/>,
-            href: 'manage-map'
+            href: '/manage-map'
         },
         {
             name: 'manage mobile app version',
             icon: <AppSettingsAltIcon/>,
-            href: 'manage-mobile'
+            href: '/manage-mobile'
         },
         {
             name: 'api credentials',
             icon: <SettingsIcon/>,
-            href: 'api-credentials'
+            href: '/api-credentials'
         },
         {
             name: 'payment gateway',
             icon: <PaymentIcon/>,
-            href: 'payment-gateway'
+            href: '/payment-gateway'
         },
         {
             name: 'fees management',
             icon: <PaymentIcon/>,
-            href: 'fees-management'
+            href: '/fees-management'
         },
         {
             name: 'manage referral settings',
             icon: <SupervisorAccountIcon/>,
-            href: 'manage-referral'
+            href: '/manage-referral'
         },
         {
             name: 'metas management',
             icon: <SettingsIcon/>,
-            href: 'metas-management'
+            href: '/metas-management'
         },
         {
             name: 'manage country',
             icon: <PublicIcon/>,
-            href: 'manage country'
+            href: '/manage country'
         },
         {
             name: 'manage currency',
             icon: <CurrencyExchangeIcon/>,
-            href: 'manage-currency'
+            href: '/manage-currency'
         },
         {
             name: 'manage language',
             icon: <PublicIcon/>,
-            href: 'manage-language'
+            href: '/manage-language'
         },
         {
             name: 'manage static pages',
             icon: <SettingsIcon/>,
-            href: 'manage-static-pages'
+            href: '/manage-static-pages'
         },
         {
             name: 'manage help',
             icon: <SupervisorAccountIcon/>,
-            href: 'manage-help'
+            href: '/manage-help'
         },
         {
             name: 'social apps and links',
             icon: <SupervisorAccountIcon/>,
-            href: 'social-apps'
+            href: '/social-apps'
         },
         {
             name: 'manage support',
             icon: <SupervisorAccountIcon/>,
-            href: 'manage-support'
+            href: '/manage-support'
         },
         {
             name: 'system configuration',
             icon: <SettingsIcon/>,
-            href: 'system-config'
+            href: '/system-config'
         }
     ])
 }

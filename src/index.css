@@ -34,7 +34,7 @@ html{
 
 .activeMenuItem{
   background-color: #F3F2F2 !important;
-  border-left: 2px #F26722 solid !important;
+  border-left: 2px #cc8315 solid !important;
 }
 .logoDiv{
   display: flex;
@@ -74,10 +74,48 @@ input:-webkit-autofill:active {
     transition-delay: 5000s, color 5000s;
 }
 
-.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
-  border-color: rgba(57, 205, 204, 1) !important;
-  border-width: 1px !important;
-}
 .MuiInputLabel-root.Mui-focused{
-  color: rgba(57, 205, 204, 1) !important;
+  color: black !important;
 }
+
+.MuiFilledInput-root{
+  background-color: transparent !important;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+}
+.MuiFilledInput-root::before{
+  border-bottom: none !important ;
+}
+.MuiOutlinedInput-input:focus{
+  border-width: 1px !important ;
+} 
+.MuiOutlinedInput-notchedOutline{
+  border-width: 1px !important ;
+  border-color: black;
+}
+/* .MuiOutlinedInput-notchedOutline{
+  border: 0 !important ;
+}      */
+.MuiFilledInput-root:hover{
+  border-color: black;
+} 
+.line {
+  width: 50px;
+  height: 2px;
+  position: relative;
+}
+.circle {
+  display: inline-block;
+  vertical-align: middle;
+  width: 7px;
+  height: 7px;
+  background-color: white;
+  border: solid 2px white;
+  border-radius: 50%;
+  position: absolute;
+  top: -4.5px;
+  left: calc(50% - 5px);
+}
+/* .gmnoprint {
+  display: none !important;
+} */

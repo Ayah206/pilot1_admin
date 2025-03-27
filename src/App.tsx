@@ -5,9 +5,8 @@ import SideBar from './components/sidebar';
 import Dashboard from './screens/dashboard';
 import Admins from './screens/adminsManagement';
 import { Route, Routes, Navigate, BrowserRouter as Router } from 'react-router-dom';
-import { stringify } from 'node:querystring';
 import { useEffect } from 'react';
-import ManageCompany from './screens/manageCompany';
+import ManageCities from './screens/manageCities';
 import ManageDrivers from './screens/manageDrivers';
 import ManageRiders from './screens/manageRiders';
 import ManageVehicles from './screens/manageVehicles';
@@ -27,19 +26,34 @@ import Referrals from './screens/referrals';
 import ManageMap from './screens/manageMap';
 import ManageMobile from './screens/manageMobile';
 import Login from './screens/login';
+import Hotbtn from './screens/hotbtn';
+import AddAdmin from './screens/addAdmin';
+import AddCity from './screens/addCity';
 
 
 const theme = createTheme({
   palette: {
     secondary: {
-      main: '#ffffff'
+      main: '#ffffff',
     },
     primary:{
       main: '#EF6C33',
-      // contrastText: 'rgba(57, 205, 204, 1)'
     },
-   
+    info:{
+      main: '#000000'
+    },
+    warning:{
+      main: '#f0f0f0'
+    }
+  
   },
+  components: {
+    MuiButtonBase: {
+      defaultProps:{
+        disableRipple: true 
+      }     
+    }
+  }
   
 });
 function App() {
@@ -52,7 +66,7 @@ function App() {
         <Route path = '/' element = {<Navigate to= "/dashboard" />} />
             <Route path = '/admins-management' element = {<SideBar><Admins/></SideBar> } />
             <Route path = '/dashboard' element = {<SideBar><Dashboard /></SideBar>} />
-            <Route path = '/manage-company' element = {<SideBar><ManageCompany /></SideBar> } />
+            <Route path = '/manage-cities' element = {<SideBar><ManageCities /></SideBar> } />
             <Route path = '/manage-drivers' element = { <SideBar><ManageDrivers /></SideBar> } />
             <Route path = '/manage-riders' element = {<SideBar><ManageRiders /></SideBar> } />
             <Route path = '/manage-Vehicles' element = {<SideBar><ManageVehicles /></SideBar>} />
@@ -71,6 +85,9 @@ function App() {
             <Route path = '/referrals' element = {<SideBar><Referrals /></SideBar>} />
             <Route path = '/manage-map' element = {<SideBar><ManageMap /></SideBar>} />
             <Route path = '/manage-mobile' element = {<SideBar><ManageMobile /></SideBar>} />
+            <Route path = '/hotbtn' element = {<Hotbtn />} />
+            <Route path = '/admins-management/add' element = {<SideBar><AddAdmin/></SideBar>} />
+            <Route path = '/manage-cities/add' element = {<SideBar><AddCity/></SideBar>} />
       </Routes>
     </Router>
     </ThemeProvider>

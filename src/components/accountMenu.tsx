@@ -24,27 +24,32 @@ export default function AccountMenu() {
   };
   return (
     <>
-       <Toolbar sx = {{
+       <Toolbar disableGutters sx = {{
             color:'black',
+            px: 2,
             justifyContent: 'space-between',
             position : 'sticky',
             bgcolor : 'secondary.main',
             top: 0,
             zIndex: 99999,
-            boxShadow: 1 
+             
         }}>
-          <div className = "logoDiv">
+          <a className = "logoDiv" href = "/">
             <img alt = "Pilot one" src = "/logo-png/Orange-1.png" width = "45px" />
-          </div>
+          </a>
           <Tooltip title="Account settings">
           <IconButton
             onClick={handleClick}
-            // sx={{ ml: 2 }}
+            sx={{ 
+              '&:hover, &:active': {
+                backgroundColor: 'transparent'
+              } 
+            }}
             aria-controls={open ? 'account-menu' : undefined}
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
           >
-            <Avatar sx = {{width: 32, height: 32}}>M</Avatar>
+            <Avatar sx = {{width: 32, height: 32}}>A</Avatar>
           </IconButton>
         </Tooltip>
       </Toolbar>
@@ -60,6 +65,7 @@ export default function AccountMenu() {
             overflow: 'visible',
             filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
             mt: 1.5,
+            width: 200,
             '& .MuiAvatar-root': {
               width: 32,
               height: 32,
@@ -83,17 +89,17 @@ export default function AccountMenu() {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
-        <MenuItem onClick={handleClose}>
+        <MenuItem onClick={handleClose} disableGutters sx = {{
+          paddingX: 1
+        }}>
           <Avatar>A</Avatar>
           <Box sx = {{
-            alignItems: 'center',
             '& .MuiTypography-root':{
-              lineHeight: 1,
-              ml:1
+              lineHeight: 1
             }
             }}>
-            <Typography component = 'h6' sx = {{}}>
-              Ayaefu
+            <Typography component = 'p' sx = {{fontSize: 12, fontWeight: 'bold', mb:0.5}}>
+              Ayaefu Luke
             </Typography>
             <Typography fontSize = 'smaller' sx = {{color: 'grey'}}>
               Admin
@@ -102,11 +108,17 @@ export default function AccountMenu() {
         </MenuItem>
         <Divider />
         
-        <MenuItem onClick={handleClose} component = 'a' href = '/login'>
+        <MenuItem onClick={handleClose} component = 'a' href = '/login' disableGutters sx = {{
+          color: 'red',
+          px: 1,
+          '& .MuiListItemIcon-root':{
+            minWidth: 0,
+          } 
+          }} >
           <ListItemIcon>
-            <Logout fontSize="small" />
+            <Logout />
           </ListItemIcon>
-          Logout
+          <Typography component = 'p' sx = {{ml: 1, fontSize: 14}}>Logout</Typography> 
         </MenuItem>
       </Menu>
     </>

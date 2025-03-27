@@ -26,9 +26,8 @@ export default function Form(){
           console.log(credentials) 
         },
       });
-      console.log(formik.handleChange)
     return(
-        <Box className = 'loginForm' component = 'form' autoComplete="off" onSubmit= {formik.handleSubmit} >
+        <Box className = 'loginForm' >
             <Stack spacing = {5}>
                 <Stack spacing = {2}>
                     <Typography align = 'center' sx = {{

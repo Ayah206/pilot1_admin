@@ -73,7 +73,7 @@ export default function SideBar(props: any) {
       <List>
         {drawerList.map((obj, index) => (
           <ListItem key={index} disablePadding sx = {{}} >
-            <ListItemButton id = {obj.href} component = "a" href = {obj.href}
+            <ListItemButton id = {obj.href.split('/')[1]} component = "a" href = {obj.href}
              sx ={{
               textTransform: 'capitalize'
             }}>
@@ -110,7 +110,7 @@ export default function SideBar(props: any) {
       <List>
         {drawerList.map((obj, index) => (
           <ListItem key={index} disablePadding sx = {{}} >
-            <ListItemButton id = {obj.href} component = "a" href = {obj.href}
+            <ListItemButton id = {obj.href.split('/')[1]} component = "a" href = {obj.href}
              sx ={{
               textTransform: 'capitalize'
             }}>

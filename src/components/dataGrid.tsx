@@ -10,38 +10,15 @@ interface Props{
     cols: any
 }
 export default function DataGridDemo(props: Props){
-    const columns: GridColDef[] = [
-        ...props.cols,
-        {
-          field: 'actions',
-          headerName: 'Actions',
-          width: 100,
-          sortable: false,
-          headerAlign: 'right',
-          align: 'right',
-          type: 'actions',
-          getActions: (params: any ) => [
-              <GridActionsCellItem
-                  icon = {<EditIcon/>}
-                  label="edit"
-                  showInMenu
-              />,
-              <GridActionsCellItem
-                  icon = {<DeleteIcon/>}
-                  label="delete"
-                  showInMenu
-              />    
-          ]
-        },
-      ];
   return (
     <Box sx={{ 
         height: 'fit-content',
-        width: '100%'
+        width: '100%',
+        
     }}>
       <DataGrid
         rows={props.rows}
-        columns={columns}
+        columns={props.cols}
         initialState={{
           pagination: {
             paginationModel: {
@@ -74,7 +51,8 @@ export default function DataGridDemo(props: Props){
             '& .MuiDataGrid-columnHeaders': {
                 padding: '20px',
                 backgroundColor: 'white',
-                mb: 1
+                mb: 1,
+                textTransform: 'capitalize'
             },
             '& .MuiDataGrid-row':{
                 px: '20px',
@@ -99,7 +77,8 @@ export default function DataGridDemo(props: Props){
             },
             '& .MuiDataGrid-row:hover':{
                 backgroundColor:'white'
-            }
+            },
+           
             
         }}
       />
